@@ -38,8 +38,8 @@ function Projects() {
               isBlog={false}
               title="Talk-Fusion"
               description="Developed TalkFusion, a high-performance AI chat platform integrating Groq’s Llama-3.1 via FastAPI for low-latency, natural language processing. Engineered a responsive React interface with secure REST API communication, fully deployed on Vercel and Render with automated cloud scaling."
-              ghLink="https://github.com/riteshkr7578/TalkFusion"
-              demoLink="https://talk-fusion-gamma.vercel.app/"
+              ghLink="https://github.com/riteshkr7578/Talk-Fusion"
+              demoLink="https://talk-fusion-chat.vercel.app/"
             />
           </Col>
 
