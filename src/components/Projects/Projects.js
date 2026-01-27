@@ -8,6 +8,8 @@ import JobLane from "../../Assets/Projects/JobLane.png";
 import MOVEEASE from "../../Assets/Projects/moveease.png";
 import FASHION from "../../Assets/Projects/Fashion.png";
 import TalkFusion from "../../Assets/Projects/TalkFusion.png";
+import Task from "../../Assets/Projects/Task.png"
+import Blog from "../../Assets/Projects/Blog.png"
 
 function Projects() {
   return (
@@ -42,6 +44,32 @@ function Projects() {
               demoLink="https://talk-fusion-chat.vercel.app/"
             />
           </Col>
+
+
+        
+              <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Blog}
+              isBlog={false}
+              title="✍️ BlogSphere – Full Stack Content Management Platform"
+              description="A full-stack Blog Platform built using the MERN stack, allowing users to create, manage, and publish blog posts with rich text content, images, categories, comments, likes, and a draft–publish workflow. The application is designed to reflect real-world content management behavior with proper authentication, authorization, and clean UI."
+              ghLink="https://github.com/riteshkr7578/Blog-Platform-MERN"
+              demoLink="https://github.com/riteshkr7578/Blog-Platform-MERN"
+            />
+          </Col>
+
+
+            <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Task}
+              isBlog={false}
+              title="📝 Task Management System"
+              description="A full-stack Task Management System built using Next.js, Node.js, Express, Prisma ORM, and MySQL, featuring secure JWT authentication, protected routes, and complete task CRUD functionality."
+              ghLink="https://github.com/riteshkr7578/Task-Management-System"
+              demoLink="https://github.com/riteshkr7578/Task-Management-System"
+            />
+          </Col>
+
 
           <Col md={4} className="project-card">
             <ProjectCard

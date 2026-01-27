@@ -11,6 +11,7 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import Experience from "../Experience";
 
 function Home() {
   return (
@@ -53,6 +54,7 @@ function Home() {
             Professional <strong className="purple">Skillset </strong>
           </h1>
       <Techstack/>
+      <Experience/>
 
       <Container>
         <Row style={{ paddingTop: "50px", paddingBottom: "80px" }}>
