@@ -45,10 +45,20 @@ function Home2() {
             </p>
           </Col>
           <Col md={4} className="myAvtar">
-            <Tilt>
-              <img src={Avatar3} className="img-fluid" alt="avatar" />
-            </Tilt>
-          </Col>
+  <Tilt>
+    <img 
+      src={Avatar3} 
+      className="img-fluid" 
+      alt="avatar" 
+      style={{ 
+        maxHeight: "450px",  // Adjust this value to match your design
+        width: "auto", 
+        borderRadius: "10px", // Optional: adds a slight curve like the screenshot
+        objectFit: "cover" 
+      }} 
+    />
+  </Tilt>
+</Col>
         </Row>
       </Container>
     </Container>
