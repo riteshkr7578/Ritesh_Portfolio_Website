@@ -759,3 +759,101 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+/* --------- */
+/* Contact Section */
+/* --------- */
+
+.contact-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+}
+
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  padding: 40px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 15px rgba(132, 0, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.contact-input {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(199, 112, 240, 0.3) !important;
+  color: white !important;
+  margin-bottom: 10px !important;
+}
+
+.contact-input:focus {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: #c770f0 !important;
+  color: white !important;
+  box-shadow: 0 0 10px rgba(199, 112, 240, 0.5) !important;
+}
+
+.contact-btn {
+  background-color: #c770f0 !important;
+  border-color: #c770f0 !important;
+  padding: 10px 30px !important;
+  font-size: 1.1em !important;
+  margin-top: 20px !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.contact-btn:hover {
+  background-color: #a04fc9 !important;
+  border-color: #a04fc9 !important;
+  transform: scale(1.05) !important;
+}
+
+/* --------- */
+/* Contact Section */
+/* --------- */
+
+.contact-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+}
+
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  padding: 40px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 15px rgba(132, 0, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.contact-input {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(199, 112, 240, 0.3) !important;
+  color: white !important;
+  margin-bottom: 10px !important;
+}
+
+.contact-input:focus {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: #c770f0 !important;
+  color: white !important;
+  box-shadow: 0 0 10px rgba(199, 112, 240, 0.5) !important;
+}
+
+.contact-btn {
+  background-color: #c770f0 !important;
+  border-color: #c770f0 !important;
+  padding: 10px 30px !important;
+  font-size: 1.1em !important;
+  margin-top: 20px !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.contact-btn:hover {
+  background-color: #a04fc9 !important;
+  border-color: #a04fc9 !important;
+  transform: scale(1.05) !important;
+}
