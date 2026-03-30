@@ -75,7 +75,7 @@ function Contact() {
                 <Form.Control 
                   type="email" 
                   placeholder="Enter email" 
-                  name="user_email" 
+                  name="email" 
                   required 
                   className="contact-input"
                 />
