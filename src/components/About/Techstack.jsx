@@ -1,5 +1,4 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
 import Node from "../../Assets/TechIcons/Node.svg";
 import ReactIcon from "../../Assets/TechIcons/React.svg";
 import Python from "../../Assets/TechIcons/Python.svg";
@@ -17,94 +16,51 @@ import EXPRESS from "../../Assets/TechIcons/express.svg";
 import Laravel from "../../Assets/TechIcons/laravel.webp";
 
 function Techstack() {
+  const techs = [
+    { src: Javascript, name: 'Javascript' },
+    { src: Python, name: 'Python' },
+    { src: ReactIcon, name: 'React.Js' },
+    { src: Typescript, name: 'TypeScript' },
+    { src: Node, name: 'Node.Js' },
+    { src: EXPRESS, name: 'Express.Js' },
+    { src: Mongo, name: 'Mongo DB' },
+    { src: Redux, name: 'Redux' },
+    { src: Git, name: 'Git' },
+    { src: Firebase, name: 'Firebase' },
+    { src: SQL, name: 'Postgresql' },
+    { src: Tailwind, name: 'Tailwind CSS' },
+    { src: Postman, name: 'Postman' },
+    { src: AWS, name: 'AWS' }
+  ];
+
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-     
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Javascript} alt="javascript" />
-        <div className="tech-icons-text">Javascript</div>
-      </Col>
-        <Col xs={4} md={2} className="tech-icons">
-        <img src={Python} alt="Python" />
-        <div className="tech-icons-text">Python</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={ReactIcon} alt="react" />
-        <div className="tech-icons-text">React.Js</div>
-      </Col>
-    
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Typescript} alt="typescript" />
-        <div className="tech-icons-text">TypeScript</div>
-      </Col>
-    
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Node} alt="node" />
-        <div className="tech-icons-text">Node.Js</div>
-      </Col>
-     <Col xs={4} md={2} className="tech-icons">
-  <img 
-    src={EXPRESS} 
-    alt="express" 
-    style={{ height: '10px', width: 'auto' }} 
-  />
-  <div className="tech-icons-text">Express.Js</div>
-</Col>
-    
-      
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Mongo} alt="mongoDb" />
-        <div className="tech-icons-text">Mongo DB</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Redux} alt="redux" />
-        <div className="tech-icons-text">Redux</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Git} alt="git" />
-        <div className="tech-icons-text">Git</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Firebase} alt="firebase" />
-        <div className="tech-icons-text">Firebase</div>
-      </Col>
-  
- 
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={SQL} alt="SQL" />
-        <div className="tech-icons-text">Postgresql</div>
-      </Col>
-
-    
-   
-
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Tailwind} alt="tailwind" />
-        <div className="tech-icons-text">Tailwind CSS</div>
-      </Col>
-
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Postman} alt="Postman" />
-        <div className="tech-icons-text">Postman</div>
-      </Col>
-
- 
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={AWS} alt="Postman" className="tech-icon-images" />
-        <div className="tech-icons-text">AWS</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Laravel} alt="laravel" className="tech-icon-images" />
-        <div className="tech-icons-text">Laravel</div>
-      </Col>
-  
-    </Row>
+    <div className="flex flex-wrap justify-center gap-4 pb-12 px-4">
+      {techs.map((tech, index) => (
+        <div
+          key={index}
+          className="tech-icons flex flex-col items-center justify-center gap-2 px-4 py-3 rounded-lg border border-dark-border bg-dark-card hover:border-purple-primary transition-all duration-300 hover:scale-105"
+          style={{
+            backgroundColor: 'rgba(25, 25, 30, 0.7)',
+            borderColor: 'rgba(255, 255, 255, 0.1)',
+            cursor: 'pointer',
+            minWidth: '120px'
+          }}
+        >
+          <img
+            src={tech.src}
+            alt={tech.name}
+            style={{
+              height: '40px',
+              width: 'auto',
+              filter: 'grayscale(10%)',
+              transition: '0.3s'
+            }}
+            className="hover:brightness-110"
+          />
+          <div className="tech-icons-text text-sm text-center">{tech.name}</div>
+        </div>
+      ))}
+    </div>
   );
 }
 

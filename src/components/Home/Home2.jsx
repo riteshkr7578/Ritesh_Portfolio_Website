@@ -1,16 +1,15 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import Tilt from "react-parallax-tilt";
 import Avatar3 from "../../Assets/Avatar3.jpeg";
 
 function Home2() {
   return (
-    <Container fluid className="home-about-section" id="about">
-      <Container>
-        <Row style={{ alignItems: "center" }}>
-          <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+    <div className="home-about-section relative z-10 py-16" id="about">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="home-about-description">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              LET ME <span className="text-purple-primary ml-2">INTRODUCE</span> MYSELF
             </h1>
             <p className="home-about-body">
               I am a Full Stack Developer specializing in the MERN stack and currently pursuing a B.Tech in Computer Science. I am passionate about transforming ideas into reliable, scalable products, with robust skills in React, Node.js, Express, MongoDB, and Python.
@@ -43,25 +42,25 @@ function Home2() {
                 <b className="purple">Express.js</b>.
               </i>
             </p>
-          </Col>
-          <Col md={4} className="myAvtar">
-  <Tilt>
-    <img 
-      src={Avatar3} 
-      className="img-fluid" 
-      alt="avatar" 
-      style={{ 
-        maxHeight: "450px",  // Adjust this value to match your design
-        width: "auto", 
-        borderRadius: "10px", // Optional: adds a slight curve like the screenshot
-        objectFit: "cover" 
-      }} 
-    />
-  </Tilt>
-</Col>
-        </Row>
-      </Container>
-    </Container>
+          </div>
+          <div className="home-about-image">
+            <Tilt>
+              <img 
+                src={Avatar3} 
+                className="w-full rounded-lg" 
+                alt="avatar" 
+                style={{ 
+                  maxHeight: "450px",
+                  width: "auto", 
+                  objectFit: "cover" 
+                }} 
+              />
+            </Tilt>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
+
 export default Home2;

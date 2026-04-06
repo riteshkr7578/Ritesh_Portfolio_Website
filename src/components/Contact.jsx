@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Particle from "./Particle";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from 'react-toastify';
@@ -13,8 +12,6 @@ function Contact() {
     e.preventDefault();
     setLoading(true);
 
-    // Note: Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', and 'YOUR_PUBLIC_KEY' 
-    // with actual values from EmailJS dashboard.
     emailjs
       .sendForm(
         "service_hdnzruf",
@@ -38,78 +35,101 @@ function Contact() {
   };
 
   return (
-    <Container fluid className="contact-section">
+    <div className="contact-section relative z-10 pt-20 pb-8">
       <Particle />
-      <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
-          <Col
-            md={8}
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex justify-center">
+          <div
+            className="w-full md:w-8/12 pt-8 pb-16"
             style={{
               justifyContent: "center",
               paddingTop: "30px",
               paddingBottom: "50px",
             }}
           >
-              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-                Get in <strong className="purple">Touch</strong>
-              </h1>
-              <p style={{ color: "var(--text-color)", opacity: "0.8" }}>
-                I'm always open to discussing new projects, creative ideas or
-                opportunities to be part of your visions.
-              </p>
-            
-            <Form ref={form} onSubmit={sendEmail} className="contact-form">
-              <Form.Group className="mb-3" controlId="formGroupName">
-                <Form.Label style={{ color: "var(--text-color)" }}>Name</Form.Label>
-                <Form.Control 
-                  type="text" 
-                  placeholder="Enter your name" 
-                  name="user_name" 
-                  required 
-                  className="contact-input"
-                  style={{ backgroundColor: "var(--icon-bg)", color: "var(--text-color)", border: "1px solid var(--border-color)" }}
+            <h1 className="text-4xl md:text-5xl font-bold pb-5">
+              Get in <strong className="text-purple-primary">Touch</strong>
+            </h1>
+            <p className="text-base md:text-lg opacity-80 mb-8">
+              I'm always open to discussing new projects, creative ideas or
+              opportunities to be part of your visions.
+            </p>
+
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
+              {/* Name Field */}
+              <div>
+                <label className="block text-sm md:text-base font-medium mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  name="user_name"
+                  required
+                  className="contact-input w-full px-4 py-3 rounded-lg border transition-all duration-300 hover:border-purple-primary focus:border-purple-primary focus:outline-none"
+                  style={{
+                    backgroundColor: "rgba(255, 255, 255, 0.05)",
+                    color: "#ffffff",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                  }}
                 />
-              </Form.Group>
-              
-              <Form.Group className="mb-3" controlId="formGroupEmail">
-                <Form.Label style={{ color: "var(--text-color)" }}>Email address</Form.Label>
-                <Form.Control 
-                  type="email" 
-                  placeholder="Enter email" 
-                  name="email" 
-                  required 
-                  className="contact-input"
-                  style={{ backgroundColor: "var(--icon-bg)", color: "var(--text-color)", border: "1px solid var(--border-color)" }}
+              </div>
+
+              {/* Email Field */}
+              <div>
+                <label className="block text-sm md:text-base font-medium mb-2">
+                  Email address
+                </label>
+                <input
+                  type="email"
+                  placeholder="Enter email"
+                  name="email"
+                  required
+                  className="contact-input w-full px-4 py-3 rounded-lg border transition-all duration-300 hover:border-purple-primary focus:border-purple-primary focus:outline-none"
+                  style={{
+                    backgroundColor: "rgba(255, 255, 255, 0.05)",
+                    color: "#ffffff",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                  }}
                 />
-              </Form.Group>
-              
-              <Form.Group className="mb-3" controlId="formGroupMessage">
-                <Form.Label style={{ color: "var(--text-color)" }}>Message</Form.Label>
-                <Form.Control 
-                  as="textarea" 
-                  rows={5} 
-                  placeholder="Write your message here..." 
-                  name="message" 
-                  required 
-                  className="contact-input"
-                  style={{ backgroundColor: "var(--icon-bg)", color: "var(--text-color)", border: "1px solid var(--border-color)" }}
+              </div>
+
+              {/* Message Field */}
+              <div>
+                <label className="block text-sm md:text-base font-medium mb-2">
+                  Message
+                </label>
+                <textarea
+                  rows={5}
+                  placeholder="Write your message here..."
+                  name="message"
+                  required
+                  className="contact-input w-full px-4 py-3 rounded-lg border transition-all duration-300 hover:border-purple-primary focus:border-purple-primary focus:outline-none resize-none"
+                  style={{
+                    backgroundColor: "rgba(255, 255, 255, 0.05)",
+                    color: "#ffffff",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                  }}
                 />
-              </Form.Group>
-              
-              <Button 
-                variant="primary" 
-                type="submit" 
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
                 disabled={loading}
-                className="contact-btn"
+                className="contact-btn w-full md:w-auto px-6 py-3 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed"
+                style={{
+                  backgroundColor: "#a855f7",
+                }}
               >
                 {loading ? "Sending..." : "Send Message"}
-              </Button>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
       <ToastContainer position="bottom-right" theme="dark" />
-    </Container>
+    </div>
   );
 }
 

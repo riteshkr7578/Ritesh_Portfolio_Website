@@ -1,5 +1,4 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
 import macOs from "../../Assets/TechIcons/Apple MacOSX.svg";
 import chrome from "../../Assets/TechIcons/Google Chrome.svg";
 import vsCode from "../../Assets/TechIcons/vscode.svg";
@@ -7,31 +6,42 @@ import PYCHARM from "../../Assets/TechIcons/pycharm.png";
 import Antigravity from "../../Assets/TechIcons/antigravity.webp";
 
 function Toolstack() {
+  const tools = [
+    { src: macOs, name: 'Window Os' },
+    { src: chrome, name: 'Google Chrome' },
+    { src: vsCode, name: 'Vs Code' },
+    { src: PYCHARM, name: 'PyCharm' },
+    { src: Antigravity, name: 'Antigravity' }
+  ];
+
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={macOs} alt="macOs" className="tech-icon-images" />
-        <div className="tech-icons-text">Window Os</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons ">
-        <img src={chrome} alt="Chrome" className="tech-icon-images" />
-        <div className="tech-icons-text">Google Chrome</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons ">
-        <img src={vsCode} alt="vsCode" className="tech-icon-images" />
-        <div className="tech-icons-text">Vs Code</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons ">
-        <img src={PYCHARM} alt="pycharm" className="tech-icon-images" />
-        <div className="tech-icons-text">PyCharm</div>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons ">
-        <img src={Antigravity} alt="antigravity" className="tech-icon-images" />
-        <div className="tech-icons-text">Antigravity</div>
-      </Col>
-    </Row>
+    <div className="flex flex-wrap justify-center gap-4 pb-12 px-4">
+      {tools.map((tool, index) => (
+        <div
+          key={index}
+          className="tech-icons flex flex-col items-center justify-center gap-2 px-4 py-3 rounded-lg border border-dark-border bg-dark-card hover:border-purple-primary transition-all duration-300 hover:scale-105"
+          style={{
+            backgroundColor: 'rgba(25, 25, 30, 0.7)',
+            borderColor: 'rgba(255, 255, 255, 0.1)',
+            cursor: 'pointer',
+            minWidth: '120px'
+          }}
+        >
+          <img
+            src={tool.src}
+            alt={tool.name}
+            className="tech-icon-images"
+            style={{
+              height: '40px',
+              width: 'auto',
+              filter: 'grayscale(10%)',
+              transition: '0.3s'
+            }}
+          />
+          <div className="tech-icons-text text-sm text-center">{tool.name}</div>
+        </div>
+      ))}
+    </div>
   );
 }
 

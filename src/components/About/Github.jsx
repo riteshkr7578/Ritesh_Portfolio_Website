@@ -1,27 +1,27 @@
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
-import { Row } from "react-bootstrap";
 
 function Github() {
   return (
-    <Row
+    <div
+      className="flex flex-col items-center justify-center pb-2 text-white"
       style={{
-        justifyContent: "center",
-        paddingBottom: "10px",
         color: "white",
       }}
     >
-      <h1 className="project-heading pb-4" style={{ paddingBottom: "20px" }}>
-        Days I <strong className="purple">Code</strong>
+      <h1 className="project-heading pb-4 text-3xl md:text-4xl font-bold text-center mb-6">
+        Days I <strong className="text-purple-primary">Code</strong>
       </h1>
-      <GitHubCalendar
-        username="riteshkr7578"
-        blockSize={30}
-        blockMargin={10}
-        color="#c084f5"
-        fontSize={20}
-      />
-    </Row>
+      <div className="flex justify-center">
+        <GitHubCalendar
+          username="riteshkr7578"
+          blockSize={30}
+          blockMargin={10}
+          color="#c084f5"
+          fontSize={20}
+        />
+      </div>
+    </div>
   );
 }
 

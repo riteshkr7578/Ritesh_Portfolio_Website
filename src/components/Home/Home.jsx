@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
@@ -15,97 +14,104 @@ import Experience from "../Experience";
 function Home() {
   return (
     <section>
-      <Container fluid className="home-section" id="home">
+      <div className="home-section relative z-10 pt-5 pb-0">
         <Particle />
-        <Container className="home-content">
-          <Row style={{ justifyContent: "center", alignItems: "center", gap: "30px" }}>
-            <Col md={5} className="home-header" style={{ textAlign: "left", paddingRight: "40px" }}>
-              <h1 style={{ paddingBottom: 5 }} className="heading">
+        <div className="max-w-7xl mx-auto px-4">
+          <div
+            className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-8"
+            style={{ justifyContent: "center", alignItems: "center" }}
+          >
+            <div
+              className="md:w-5/12 text-left pt-2"
+              style={{ textAlign: "left", paddingRight: "2.5rem" }}
+            >
+              <h1 className="text-3xl md:text-5xl font-bold pb-1">
                 Hi There!{" "}
-                <span className="wave" role="img" aria-labelledby="wave">
+                <span className="wave inline-block" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
               </h1>
 
-              <h1 className="heading-name">
+              <h1 className="text-3xl md:text-5xl font-black mt-2">
                 I'M
-                <strong className="main-name"> RITESH KUMAR</strong>
+                <strong className="text-purple-primary ml-2"> RITESH KUMAR</strong>
               </h1>
 
-              <div style={{ padding: "40px 0", textAlign: "left", fontSize: "1.2em", fontWeight: "300" }}>
+              <div className="py-10 text-lg font-light">
                 <Type />
               </div>
-            </Col>
+            </div>
 
-            <Col md={5} style={{ paddingBottom: 10, display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <div className="md:w-5/12 pb-2.5 flex items-center justify-center">
               <div className="hero-logo-container">
                 <img
                   src={homeLogo}
                   alt="home pic"
-                  className="img-fluid"
+                  className="w-full max-h-96"
                   style={{ maxHeight: "450px" }}
                 />
               </div>
-            </Col>
-          </Row>
-        </Container>
-      </Container>
-      <Home2 />
-      <Experience/>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <section className="find-me-section">
-        <Container>
-          <Row style={{ paddingTop: "30px", paddingBottom: "30px" }}>
-            <Col md={12} className="home-about-social">
-            <h1>Find Me On</h1>
-            <p>
-              Feel free to <span className="purple">connect </span>with me
-            </p>
-            <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/riteshkr7578"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://x.com/riteshc75786278"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/ritesh-kumar-732535221/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/ritesh_chaurasiya11"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
-            </ul>
-          </Col>
-        </Row>
-        </Container>
+      <Home2 />
+      <Experience />
+
+      <section className="find-me-section relative z-10 py-5 md:py-10">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-col items-center py-7 md:py-7">
+            <div className="w-full text-center">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4">Find Me On</h1>
+              <p className="text-base md:text-lg">
+                Feel free to <span className="text-purple-primary font-semibold">connect</span> with me
+              </p>
+              <ul className="flex flex-wrap justify-center gap-4 mt-4 list-none p-0">
+                <li className="social-icons">
+                  <a
+                    href="https://github.com/riteshkr7578"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="home-social-icons"
+                  >
+                    <AiFillGithub size={24} />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://x.com/riteshc75786278"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="home-social-icons"
+                  >
+                    <AiOutlineTwitter size={24} />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://www.linkedin.com/in/ritesh-kumar-732535221/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="home-social-icons"
+                  >
+                    <FaLinkedinIn size={24} />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://www.instagram.com/ritesh_chaurasiya11"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="home-social-icons"
+                  >
+                    <AiFillInstagram size={24} />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
     </section>
   );
