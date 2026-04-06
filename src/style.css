@@ -703,10 +703,16 @@ button:focus {
 /* --------- */
 .project-section {
   position: relative !important;
-  padding-top: 150px !important;
+  padding-top: 70px !important;
   padding-bottom: 30px !important;
   background-color: var(--body-bg) !important;
   color: var(--text-color) !important;
+}
+
+@media (max-width: 767px) {
+  .project-section {
+    padding-top: 60px !important;
+  }
 }
 
 .project-card {
@@ -721,7 +727,7 @@ button:focus {
   box-shadow: 0 4px 15px var(--border-color) !important;
   color: var(--text-color) !important;
   background-color: var(--card-bg) !important;
-  opacity: 0.9 !important;
+  opacity: 1 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
   border: 1px solid var(--border-color) !important;
@@ -729,9 +735,9 @@ button:focus {
   overflow: hidden;
 }
 .project-card-view:hover {
-  transform: translateY(-8px) !important;
+  transform: translateY(-10px) scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 8px 25px var(--border-color) !important;
+  box-shadow: 0 12px 35px rgba(168, 85, 247, 0.4) !important;
 }
 
 .blog-card {
@@ -767,8 +773,9 @@ button:focus {
 
 .card-img-top {
   padding: 20px !important;
-  opacity: 0.8 !important;
+  opacity: 1 !important;
   border-radius: 10px !important;
+  transition: transform 0.5s ease !important;
 }
 
 .blog-img {
@@ -948,10 +955,16 @@ button:focus {
 
 .about-section {
   position: relative !important;
-  padding-top: 150px !important;
+  padding-top: 70px !important;
   padding-bottom: 30px !important;
   background-color: var(--body-bg) !important;
   color: var(--text-color) !important;
+}
+
+@media (max-width: 767px) {
+  .about-section {
+    padding-top: 60px !important;
+  }
 }
 
 .tech-icons {
@@ -1193,7 +1206,7 @@ button:focus {
 
 .contact-section {
   position: relative !important;
-  padding-top: 150px !important;
+  padding-top: 70px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: var(--text-color) !important;
@@ -1205,13 +1218,19 @@ button:focus {
   color: var(--text-color) !important;
 }
 
+@media (max-width: 767px) {
+  .contact-section {
+    padding-top: 60px !important;
+  }
+}
+
 /* --------- */
 /* Contact Section */
 /* --------- */
 
 .contact-section {
   position: relative !important;
-  padding-top: 150px !important;
+  padding-top: 70px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: var(--text-color) !important;

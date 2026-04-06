@@ -4,6 +4,7 @@ import macOs from "../../Assets/TechIcons/Apple MacOSX.svg";
 import chrome from "../../Assets/TechIcons/Google Chrome.svg";
 import vsCode from "../../Assets/TechIcons/vscode.svg";
 import PYCHARM from "../../Assets/TechIcons/pycharm.png";
+import Antigravity from "../../Assets/TechIcons/antigravity.webp";
 
 function Toolstack() {
   return (
@@ -22,8 +23,13 @@ function Toolstack() {
       </Col>
 
       <Col xs={4} md={2} className="tech-icons ">
-        <img src={PYCHARM} alt="go" className="tech-icon-images" />
+        <img src={PYCHARM} alt="pycharm" className="tech-icon-images" />
         <div className="tech-icons-text">PyCharm</div>
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons ">
+        <img src={Antigravity} alt="antigravity" className="tech-icon-images" />
+        <div className="tech-icons-text">Antigravity</div>
       </Col>
     </Row>
   );

@@ -14,6 +14,7 @@ import Tailwind from "../../Assets/TechIcons/Tailwind.svg";
 import Postman from "../../Assets/TechIcons/Postman.svg";
 import AWS from "../../Assets/TechIcons/AWS.svg";
 import EXPRESS from "../../Assets/TechIcons/express.svg";
+import Laravel from "../../Assets/TechIcons/laravel.webp";
 
 function Techstack() {
   return (
@@ -98,6 +99,10 @@ function Techstack() {
         <div className="tech-icons-text">AWS</div>
       </Col>
 
+      <Col xs={4} md={2} className="tech-icons">
+        <img src={Laravel} alt="laravel" className="tech-icon-images" />
+        <div className="tech-icons-text">Laravel</div>
+      </Col>
   
     </Row>
   );
