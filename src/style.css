@@ -265,7 +265,7 @@ button:focus {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: #181a27 !important;
+    background-color: var(--nav-bg) !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
@@ -273,6 +273,16 @@ button:focus {
 }
 .navbar-brand {
   color: var(--text-color) !important;
+  background-color: transparent !important;
+  padding: 8px 12px !important;
+  border-radius: 0 !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbar-brand:hover {
+  background-color: var(--card-bg) !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
 }
 
 .logo {
@@ -334,6 +344,19 @@ button:focus {
 
 .navbar-nav .nav-item a:hover::after {
   width: 100%;
+}
+
+.light-theme .navbar-brand {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 8px 12px !important;
+  border-radius: 0 !important;
+}
+
+.light-theme .navbar-brand:hover {
+  background-color: rgba(147, 51, 234, 0.1) !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
 }
 
 /* --------- */
@@ -493,7 +516,7 @@ button:focus {
 
 .home-about-section {
   position: relative;
-  padding-bottom: 70px !important;
+  padding-bottom: 50px !important;
   padding-top: 5px !important;
   background-color: var(--body-bg) !important;
 }
@@ -516,6 +539,8 @@ button:focus {
   background-color: var(--body-bg) !important;
   color: var(--text-color) !important;
   z-index: 1;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
 }
 
 .light-theme .find-me-section {
