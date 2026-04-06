@@ -5,10 +5,8 @@ import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.jpg";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
+import { Sun, Moon } from "lucide-react";
 import {
-  AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
@@ -16,10 +14,12 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { useTheme } from "../ThemeContext";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const { isDarkMode, toggleTheme } = useTheme();
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -39,8 +39,10 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
+        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
+          <span style={{ fontWeight: "700", letterSpacing: "1px", fontSize: "1.3rem", color: "var(--text-color)" }}>
+            RK<span className="purple">.</span>
+          </span>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -103,24 +105,25 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item>
-              <Nav.Link
-                href="/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item className="fork-btn">
+            <Nav.Item style={{ marginLeft: "15px", display: "flex", alignItems: "center" }}>
               <Button
-                href="https://github.com/riteshkr7578"
-                target="_blank"
-                className="fork-btn-inner"
+                onClick={toggleTheme}
+                variant={isDarkMode ? "light" : "dark"}
+                className="theme-toggle-btn"
+                style={{
+                  padding: "8px 10px",
+                  fontSize: "1rem",
+                  borderRadius: "8px",
+                  border: isDarkMode ? "1.5px solid rgba(255, 255, 255, 0.2)" : "1.5px solid rgba(0, 0, 0, 0.2)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  backgroundColor: isDarkMode ? "rgba(255, 255, 255, 0.05)" : "rgba(0, 0, 0, 0.03)",
+                  cursor: "pointer",
+                  height: "fit-content"
+                }}
               >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
+                {isDarkMode ? <Sun size={20} color="#fbbf24" strokeWidth={2.5} /> : <Moon size={20} color="#1a1a1c" strokeWidth={2.5} />}
               </Button>
             </Nav.Item>
           </Nav>

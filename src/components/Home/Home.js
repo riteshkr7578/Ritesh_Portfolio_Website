@@ -19,9 +19,9 @@ function Home() {
       <Container fluid className="home-section" id="home">
         <Particle />
         <Container className="home-content">
-          <Row>
-            <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
+          <Row style={{ justifyContent: "center", alignItems: "center" }}>
+            <Col md={6} className="home-header" style={{ textAlign: "left" }}>
+              <h1 style={{ paddingBottom: 5 }} className="heading">
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
@@ -33,32 +33,31 @@ function Home() {
                 <strong className="main-name"> RITESH KUMAR</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div style={{ padding: 30, textAlign: "left", fontSize: "1.2em", fontWeight: "300" }}>
                 <Type />
               </div>
             </Col>
 
-            <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
-                src={homeLogo}
-                alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
-              />
+            <Col md={5} style={{ paddingBottom: 10, display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <div className="hero-logo-container">
+                <img
+                  src={homeLogo}
+                  alt="home pic"
+                  className="img-fluid"
+                  style={{ maxHeight: "450px" }}
+                />
+              </div>
             </Col>
           </Row>
         </Container>
+        <Home2 />
       </Container>
-      <Home2 />
-       <h1 className="project-heading">
-            Professional <strong className="purple">Skillset </strong>
-          </h1>
-      <Techstack/>
       <Experience/>
 
-      <Container>
-        <Row style={{ paddingTop: "50px", paddingBottom: "80px" }}>
-          <Col md={12} className="home-about-social">
+      <section className="find-me-section">
+        <Container>
+          <Row style={{ paddingTop: "30px", paddingBottom: "30px" }}>
+            <Col md={12} className="home-about-social">
             <h1>Find Me On</h1>
             <p>
               Feel free to <span className="purple">connect </span>with me
@@ -107,7 +106,8 @@ function Home() {
             </ul>
           </Col>
         </Row>
-      </Container>
+        </Container>
+      </section>
     </section>
   );
 }

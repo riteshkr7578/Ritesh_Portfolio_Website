@@ -24,7 +24,7 @@ function Footer() {
             <li className="social-icons">
               <a
                 href="https://github.com/riteshkr7578"
-                style={{ color: "white" }}
+                style={{ color: "var(--text-color)" }}
                 target="_blank" 
                 rel="noopener noreferrer"
               >
@@ -34,7 +34,7 @@ function Footer() {
             <li className="social-icons">
               <a
                 href="https://x.com/riteshc75786278"
-                style={{ color: "white" }}
+                style={{ color: "var(--text-color)" }}
                 target="_blank" 
                 rel="noopener noreferrer"
               >
@@ -44,7 +44,7 @@ function Footer() {
             <li className="social-icons">
               <a
                 href="https://www.linkedin.com/in/ritesh-kumar-732535221/"
-                style={{ color: "white" }}
+                style={{ color: "var(--text-color)" }}
                 target="_blank" 
                 rel="noopener noreferrer"
               >
@@ -54,7 +54,7 @@ function Footer() {
             <li className="social-icons">
               <a
                 href="https://www.instagram.com/ritesh_chaurasiya11"
-                style={{ color: "white" }}
+                style={{ color: "var(--text-color)" }}
                 target="_blank" 
                 rel="noopener noreferrer"
               >

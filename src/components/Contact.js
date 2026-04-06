@@ -53,36 +53,38 @@ function Contact() {
               <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
                 Get in <strong className="purple">Touch</strong>
               </h1>
-              <p style={{ color: "white" }}>
+              <p style={{ color: "var(--text-color)", opacity: "0.8" }}>
                 I'm always open to discussing new projects, creative ideas or
                 opportunities to be part of your visions.
               </p>
             
             <Form ref={form} onSubmit={sendEmail} className="contact-form">
               <Form.Group className="mb-3" controlId="formGroupName">
-                <Form.Label style={{ color: "white" }}>Name</Form.Label>
+                <Form.Label style={{ color: "var(--text-color)" }}>Name</Form.Label>
                 <Form.Control 
                   type="text" 
                   placeholder="Enter your name" 
                   name="user_name" 
                   required 
                   className="contact-input"
+                  style={{ backgroundColor: "var(--icon-bg)", color: "var(--text-color)", border: "1px solid var(--border-color)" }}
                 />
               </Form.Group>
               
               <Form.Group className="mb-3" controlId="formGroupEmail">
-                <Form.Label style={{ color: "white" }}>Email address</Form.Label>
+                <Form.Label style={{ color: "var(--text-color)" }}>Email address</Form.Label>
                 <Form.Control 
                   type="email" 
                   placeholder="Enter email" 
                   name="email" 
                   required 
                   className="contact-input"
+                  style={{ backgroundColor: "var(--icon-bg)", color: "var(--text-color)", border: "1px solid var(--border-color)" }}
                 />
               </Form.Group>
               
               <Form.Group className="mb-3" controlId="formGroupMessage">
-                <Form.Label style={{ color: "white" }}>Message</Form.Label>
+                <Form.Label style={{ color: "var(--text-color)" }}>Message</Form.Label>
                 <Form.Control 
                   as="textarea" 
                   rows={5} 
@@ -90,6 +92,7 @@ function Contact() {
                   name="message" 
                   required 
                   className="contact-input"
+                  style={{ backgroundColor: "var(--icon-bg)", color: "var(--text-color)", border: "1px solid var(--border-color)" }}
                 />
               </Form.Group>
               
