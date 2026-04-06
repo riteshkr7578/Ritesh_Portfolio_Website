@@ -639,13 +639,17 @@ button:focus {
 }
 
 .social-icons {
-  display: flex !important;
+  display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
+  margin: 0 15px !important;
   transition: all 0.3s ease-out;
 }
 
 .social-icons a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
