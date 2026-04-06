@@ -695,6 +695,10 @@ button:focus {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
   padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  list-style: none !important;
 }
 
 .blockquote-footer {
