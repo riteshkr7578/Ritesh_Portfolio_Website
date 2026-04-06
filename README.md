@@ -202,9 +202,9 @@ This portfolio was recently migrated from **Create React App to Vite** for:
 
 ## 📧 Contact & Social
 
-- **Email**: routchpriy@gmail.com (via portfolio contact form)
-- **GitHub**: [GitHub Profile](https://github.com)
-- **LinkedIn**: [LinkedIn Profile](https://linkedin.com)
+- **Email**: riteshkr75786278@gmail.com (via portfolio contact form)
+- **GitHub**: [GitHub Profile](https://github.com/riteshkr7578)
+- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/riteshkr7578)
 
 ---
 
