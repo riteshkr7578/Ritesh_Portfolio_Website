@@ -391,7 +391,7 @@ button:focus {
 }
 
 .home-header {
-  padding-top: 80px !important;
+  padding-top: 10px !important;
   z-index: 1 !important;
   position: relative !important;
 }
@@ -402,12 +402,12 @@ button:focus {
   /* background-image: var(--image-gradient), url(./Assets/home-bg.jpg); */
   background-position: top center;
   background-repeat: no-repeat;
-  padding-bottom: 30px !important;
-  padding-top: 30px !important;
+  padding-bottom: 0px !important;
+  padding-top: 10px !important;
 }
 
 .home-content {
-  padding: 9rem 0 2rem !important;
+  padding: 3rem 0 0rem !important;
   color: var(--text-color) !important;
   text-align: left;
 }
@@ -457,7 +457,9 @@ button:focus {
 
 .myAvtar {
   justify-content: center !important;
-  padding-top: 9em !important;
+  padding-top: 2em !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 @media (max-width: 767px) {
@@ -469,9 +471,9 @@ button:focus {
 
 .hero-logo-container {
   padding: 20px;
-  background: var(--card-bg);
+  background: transparent;
   border-radius: 15px;
-  border: 2px solid var(--border-color);
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -479,20 +481,20 @@ button:focus {
 }
 
 .hero-logo-container:hover {
-  border-color: var(--imp-text-color);
+  transform: scale(1.02);
   box-shadow: 0 8px 25px rgba(168, 85, 247, 0.15);
 }
 
 .light-theme .hero-logo-container {
-  background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(147, 51, 234, 0.2);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .home-about-section {
   position: relative;
   padding-bottom: 70px !important;
-  padding-top: 70px !important;
+  padding-top: 5px !important;
   background-color: var(--body-bg) !important;
 }
 

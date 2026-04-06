@@ -19,8 +19,8 @@ function Home() {
       <Container fluid className="home-section" id="home">
         <Particle />
         <Container className="home-content">
-          <Row style={{ justifyContent: "center", alignItems: "center" }}>
-            <Col md={6} className="home-header" style={{ textAlign: "left" }}>
+          <Row style={{ justifyContent: "center", alignItems: "center", gap: "30px" }}>
+            <Col md={5} className="home-header" style={{ textAlign: "left", paddingRight: "40px" }}>
               <h1 style={{ paddingBottom: 5 }} className="heading">
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
@@ -33,7 +33,7 @@ function Home() {
                 <strong className="main-name"> RITESH KUMAR</strong>
               </h1>
 
-              <div style={{ padding: 30, textAlign: "left", fontSize: "1.2em", fontWeight: "300" }}>
+              <div style={{ padding: "40px 0", textAlign: "left", fontSize: "1.2em", fontWeight: "300" }}>
                 <Type />
               </div>
             </Col>
@@ -50,8 +50,8 @@ function Home() {
             </Col>
           </Row>
         </Container>
-        <Home2 />
       </Container>
+      <Home2 />
       <Experience/>
 
       <section className="find-me-section">
