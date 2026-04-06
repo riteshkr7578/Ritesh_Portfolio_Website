@@ -6,12 +6,12 @@ function Home2() {
   return (
     <div className="home-about-section relative z-10 py-16" id="about">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="home-about-description">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="home-about-description text-center md:text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               LET ME <span className="text-purple-primary ml-2">INTRODUCE</span> MYSELF
             </h1>
-            <p className="home-about-body">
+            <p className="home-about-body text-base md:text-lg leading-relaxed mx-auto max-w-xl">
               I am a Full Stack Developer specializing in the MERN stack and currently pursuing a B.Tech in Computer Science. I am passionate about transforming ideas into reliable, scalable products, with robust skills in React, Node.js, Express, MongoDB, and Python.
               <br />
               <br />

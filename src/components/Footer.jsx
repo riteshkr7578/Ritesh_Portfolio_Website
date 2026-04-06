@@ -5,23 +5,25 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { useTheme } from "../ThemeContext";
 
 function Footer() {
+  const { isDarkMode } = useTheme();
   let date = new Date();
   let year = date.getFullYear();
   
   return (
-    <footer className="footer pt-3 pb-2" style={{ backgroundColor: "rgba(18, 18, 22, 0.85)" }}>
+    <footer className="footer pt-3 pb-2" style={{ backgroundColor: isDarkMode ? "rgba(18, 18, 22, 0.85)" : "#f5f5f7" }}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Copyright Left */}
           <div className="text-center md:text-left">
-            <h3 className="text-sm md:text-base">Designed and Developed by Ritesh Kumar</h3>
+            <h3 className="text-sm md:text-base" style={{ color: isDarkMode ? "#ffffff" : "#333333" }}>Designed and Developed by Ritesh Kumar</h3>
           </div>
 
           {/* Copyright Center */}
           <div className="text-center">
-            <h3 className="text-sm md:text-base">Copyright © {year} Ritesh</h3>
+            <h3 className="text-sm md:text-base" style={{ color: isDarkMode ? "#ffffff" : "#333333" }}>Copyright © {year} Ritesh</h3>
           </div>
 
           {/* Social Icons Right */}
@@ -30,7 +32,7 @@ function Footer() {
               <li className="social-icons">
                 <a
                   href="https://github.com/riteshkr7578"
-                  style={{ color: "#ffffff" }}
+                  style={{ color: isDarkMode ? "#ffffff" : "#333333" }}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-purple-primary transition-colors"
@@ -41,7 +43,7 @@ function Footer() {
               <li className="social-icons">
                 <a
                   href="https://x.com/riteshc75786278"
-                  style={{ color: "#ffffff" }}
+                  style={{ color: isDarkMode ? "#ffffff" : "#333333" }}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-purple-primary transition-colors"
@@ -52,7 +54,7 @@ function Footer() {
               <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/ritesh-kumar-732535221/"
-                  style={{ color: "#ffffff" }}
+                  style={{ color: isDarkMode ? "#ffffff" : "#333333" }}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-purple-primary transition-colors"
@@ -63,7 +65,7 @@ function Footer() {
               <li className="social-icons">
                 <a
                   href="https://www.instagram.com/ritesh_chaurasiya11"
-                  style={{ color: "#ffffff" }}
+                  style={{ color: isDarkMode ? "#ffffff" : "#333333" }}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-purple-primary transition-colors"

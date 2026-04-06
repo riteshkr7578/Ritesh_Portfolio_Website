@@ -29,28 +29,32 @@ function NavBar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out ${
         navColour
-          ? "bg-dark-nav dark:bg-dark-nav shadow-lg backdrop-blur-md"
-          : "bg-transparent"
+          ? "border-b-2 border-purple-primary/30"
+          : ""
       } ${isDarkMode ? "dark" : "light"}`}
+      style={{
+        backgroundColor: isDarkMode ? "rgba(10, 10, 12, 0.8)" : "rgba(255, 255, 255, 0.95)",
+        backdropFilter: "blur(8px)",
+      }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-1.5">
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center font-bold text-xl tracking-wide hover:bg-dark-card px-3 py-2 rounded-lg transition-all duration-300"
+            className="flex items-center font-bold text-lg tracking-wide hover:bg-dark-card px-2 py-1 rounded-lg transition-all duration-300"
             style={{ color: isDarkMode ? "#ffffff" : "#1a1a1c" }}
           >
             RK<span className="text-purple-primary">.</span>
           </Link>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-8 font-medium">
+          <ul className="hidden md:flex items-center gap-6 font-medium text-base">
             <li>
               <Link
                 to="/"
-                className="flex items-center gap-2 hover:text-purple-primary transition-colors duration-300"
-                style={{ color: isDarkMode ? "#ffffff" : "#1a1a1c" }}
+                className="flex items-center gap-2 hover:text-purple-primary transition-colors duration-300 no-underline"
+                style={{ color: isDarkMode ? "#ffffff" : "#333333" }}
               >
                 <AiOutlineHome />
                 Home
@@ -59,8 +63,8 @@ function NavBar() {
             <li>
               <Link
                 to="/about"
-                className="flex items-center gap-2 hover:text-purple-primary transition-colors duration-300"
-                style={{ color: isDarkMode ? "#ffffff" : "#1a1a1c" }}
+                className="flex items-center gap-2 hover:text-purple-primary transition-colors duration-300 no-underline"
+                style={{ color: isDarkMode ? "#ffffff" : "#333333" }}
               >
                 <AiOutlineUser />
                 About
@@ -69,8 +73,8 @@ function NavBar() {
             <li>
               <Link
                 to="/project"
-                className="flex items-center gap-2 hover:text-purple-primary transition-colors duration-300"
-                style={{ color: isDarkMode ? "#ffffff" : "#1a1a1c" }}
+                className="flex items-center gap-2 hover:text-purple-primary transition-colors duration-300 no-underline"
+                style={{ color: isDarkMode ? "#ffffff" : "#333333" }}
               >
                 <AiOutlineFundProjectionScreen />
                 Projects
@@ -79,8 +83,8 @@ function NavBar() {
             <li>
               <Link
                 to="/resume"
-                className="flex items-center gap-2 hover:text-purple-primary transition-colors duration-300"
-                style={{ color: isDarkMode ? "#ffffff" : "#1a1a1c" }}
+                className="flex items-center gap-2 hover:text-purple-primary transition-colors duration-300 no-underline"
+                style={{ color: isDarkMode ? "#ffffff" : "#333333" }}
               >
                 <CgFileDocument />
                 Resume
@@ -89,8 +93,8 @@ function NavBar() {
             <li>
               <Link
                 to="/contact"
-                className="flex items-center gap-2 hover:text-purple-primary transition-colors duration-300"
-                style={{ color: isDarkMode ? "#ffffff" : "#1a1a1c" }}
+                className="flex items-center gap-2 hover:text-purple-primary transition-colors duration-300 no-underline"
+                style={{ color: isDarkMode ? "#ffffff" : "#333333" }}
               >
                 <AiOutlineMail />
                 Contact
@@ -98,7 +102,7 @@ function NavBar() {
             </li>
 
             {/* Theme Toggle Button */}
-            <li className="ml-4">
+            <li className="ml-3">
               <button
                 onClick={toggleTheme}
                 className="p-2 rounded-full hover:scale-110 active:scale-95 transition-transform duration-300 flex items-center justify-center"
@@ -156,7 +160,7 @@ function NavBar() {
         {/* Mobile Menu */}
         {expand && (
           <ul
-            className="md:hidden pb-4 space-y-2 bg-dark-nav rounded-lg p-4"
+            className="md:hidden pb-4 space-y-2 bg-dark-nav rounded-lg p-4 text-base"
             style={{
               backgroundColor: isDarkMode
                 ? "rgba(18, 18, 22, 0.95)"
@@ -167,8 +171,8 @@ function NavBar() {
               <Link
                 to="/"
                 onClick={() => updateExpanded(false)}
-                className="flex items-center gap-2 py-2 hover:text-purple-primary transition-colors duration-300"
-                style={{ color: isDarkMode ? "#ffffff" : "#1a1a1c" }}
+                className="flex items-center gap-2 py-2 hover:text-purple-primary transition-colors duration-300 no-underline"
+                style={{ color: isDarkMode ? "#ffffff" : "#333333" }}
               >
                 <AiOutlineHome />
                 Home
@@ -178,8 +182,8 @@ function NavBar() {
               <Link
                 to="/about"
                 onClick={() => updateExpanded(false)}
-                className="flex items-center gap-2 py-2 hover:text-purple-primary transition-colors duration-300"
-                style={{ color: isDarkMode ? "#ffffff" : "#1a1a1c" }}
+                className="flex items-center gap-2 py-2 hover:text-purple-primary transition-colors duration-300 no-underline"
+                style={{ color: isDarkMode ? "#ffffff" : "#333333" }}
               >
                 <AiOutlineUser />
                 About
@@ -189,8 +193,8 @@ function NavBar() {
               <Link
                 to="/project"
                 onClick={() => updateExpanded(false)}
-                className="flex items-center gap-2 py-2 hover:text-purple-primary transition-colors duration-300"
-                style={{ color: isDarkMode ? "#ffffff" : "#1a1a1c" }}
+                className="flex items-center gap-2 py-2 hover:text-purple-primary transition-colors duration-300 no-underline"
+                style={{ color: isDarkMode ? "#ffffff" : "#333333" }}
               >
                 <AiOutlineFundProjectionScreen />
                 Projects
@@ -200,8 +204,8 @@ function NavBar() {
               <Link
                 to="/resume"
                 onClick={() => updateExpanded(false)}
-                className="flex items-center gap-2 py-2 hover:text-purple-primary transition-colors duration-300"
-                style={{ color: isDarkMode ? "#ffffff" : "#1a1a1c" }}
+                className="flex items-center gap-2 py-2 hover:text-purple-primary transition-colors duration-300 no-underline"
+                style={{ color: isDarkMode ? "#ffffff" : "#333333" }}
               >
                 <CgFileDocument />
                 Resume
@@ -211,8 +215,8 @@ function NavBar() {
               <Link
                 to="/contact"
                 onClick={() => updateExpanded(false)}
-                className="flex items-center gap-2 py-2 hover:text-purple-primary transition-colors duration-300"
-                style={{ color: isDarkMode ? "#ffffff" : "#1a1a1c" }}
+                className="flex items-center gap-2 py-2 hover:text-purple-primary transition-colors duration-300 no-underline"
+                style={{ color: isDarkMode ? "#ffffff" : "#333333" }}
               >
                 <AiOutlineMail />
                 Contact

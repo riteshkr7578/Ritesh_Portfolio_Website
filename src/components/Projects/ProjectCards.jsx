@@ -12,14 +12,16 @@ function ProjectCards(props) {
     >
       {/* Image Container */}
       <div 
-        className="card-img-top p-5 bg-cover bg-center"
+        className="card-img-top p-4 bg-cover bg-center"
         style={{
           backgroundImage: `url(${props.imgPath})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           borderRadius: '10px',
           opacity: 1,
-          height: '250px',
+          height: '300px',
+          width: '100%',
+          aspectRatio: '1 / 1',
         }}
       />
 

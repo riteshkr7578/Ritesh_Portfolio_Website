@@ -1,6 +1,8 @@
 import React from "react";
+import { useTheme } from "../ThemeContext";
 
 function Experience() {
+  const { isDarkMode } = useTheme();
   const experiences = [
     {
       title: "Software Development Engineer Intern",
@@ -48,11 +50,11 @@ function Experience() {
     <div
       className="home-about-section experience-section relative z-10 pb-12 pt-2"
       id="experience"
-      style={{ backgroundColor: "#0a0a0c" }}
+      style={{ backgroundColor: isDarkMode ? "#0a0a0c" : "#f5f5f7" }}
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="w-full">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-16" style={{ color: isDarkMode ? "#ffffff" : "#1a1a1c" }}>
             MY <span className="text-purple-primary ml-2">EXPERIENCE</span>
           </h1>
 
@@ -62,8 +64,9 @@ function Experience() {
                 key={index}
                 className="experience-card bg-dark-card border border-dark-border rounded-lg p-8 relative overflow-hidden hover:translate-x-2 transition-all duration-300 hover:shadow-lg hover:shadow-purple-primary/20"
                 style={{
-                  backgroundColor: "rgba(25, 25, 30, 0.7)",
+                  backgroundColor: isDarkMode ? "rgba(25, 25, 30, 0.7)" : "rgba(255, 255, 255, 0.8)",
                   borderLeft: "4px solid #a855f7",
+                  border: isDarkMode ? "1px solid rgba(168, 85, 247, 0.3)" : "1px solid rgba(168, 85, 247, 0.2)",
                 }}
               >
                 {/* Header */}
@@ -72,7 +75,7 @@ function Experience() {
                 >
                   {/* Title Section */}
                   <div className="experience-title-section">
-                    <h3 className="text-xl md:text-2xl font-bold mb-1" style={{ color: "#ffffff" }}>
+                    <h3 className="text-xl md:text-2xl font-bold mb-1" style={{ color: isDarkMode ? "#ffffff" : "#1a1a1c" }}>
                       {exp.title}
                     </h3>
                     <p className="text-lg font-bold text-purple-primary">
@@ -85,7 +88,7 @@ function Experience() {
                     <p className="font-semibold text-purple-primary">
                       {exp.period}
                     </p>
-                    <p className="text-sm opacity-80" style={{ color: "#ffffff" }}>
+                    <p className="text-sm opacity-80" style={{ color: isDarkMode ? "#ffffff" : "#333333" }}>
                       {exp.location}
                     </p>
                   </div>
@@ -99,7 +102,7 @@ function Experience() {
                       className="relative pl-6 mb-3 last:mb-0"
                       style={{
                         fontSize: "1em",
-                        color: "#ffffff",
+                        color: isDarkMode ? "#ffffff" : "#333333",
                         lineHeight: "1.6",
                       }}
                     >
