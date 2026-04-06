@@ -493,10 +493,12 @@ button:focus {
 }
 
 .hero-logo-container {
-  padding: 20px;
+  padding: 0;
   background: transparent;
-  border-radius: 15px;
+  border-radius: 0;
   border: none;
+  outline: none;
+  box-shadow: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -510,7 +512,10 @@ button:focus {
 
 .light-theme .hero-logo-container {
   background: transparent;
+  border: none;
   border-color: transparent;
+  border-radius: 0;
+  outline: none;
   box-shadow: none;
 }
 
