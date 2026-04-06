@@ -2,7 +2,7 @@
 
 A modern, fully responsive personal portfolio website built with **React 18 + Vite**. Showcasing projects, technical skills, resume, and ways to get in touch.
 
-🌐 **Live Demo**: [riteshportfolio-beige.vercel.app](https://riteshportfolio-beige.vercel.app/)
+🌐 **Live Demo**: [https://ritesh-dev-portfolio.vercel.app/](https://ritesh-dev-portfolio.vercel.app/)
 
 ---
 

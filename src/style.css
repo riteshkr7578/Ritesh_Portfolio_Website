@@ -581,19 +581,22 @@ button:focus {
 .home-about-social-links {
   justify-content: center !important;
   padding-top: 15px !important;
-  display: inline-block !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 15px !important;
   position: relative !important;
   padding-inline-start: 0 !important;
+  list-style: none !important;
 }
 
 .home-social-icons {
   position: relative !important;
-  display: inline-block !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   width: 40px !important;
   height: 40px !important;
-  text-align: center !important;
   font-size: 1.2em !important;
-  line-height: 2em !important;
   background: var(--card-bg) !important;
   color: var(--text-color) !important;
   border-radius: 50% !important;
@@ -636,9 +639,9 @@ button:focus {
 }
 
 .social-icons {
-  display: inline-block !important;
-  padding-right: 15px;
-  padding-left: 15px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   transition: all 0.3s ease-out;
 }
 
