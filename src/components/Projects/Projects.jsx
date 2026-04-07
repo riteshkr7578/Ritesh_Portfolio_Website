@@ -87,7 +87,7 @@ function Projects() {
         </h1>
         <p className="text-center text-base md:text-lg mb-12">Here are a few projects I've worked on recently.</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="project-card pt-12 pb-12 px-6 md:px-0">
               <ProjectCard

@@ -1056,6 +1056,30 @@ button:focus {
   padding-left: 1px !important;
 }
 
+.light-theme .quote-card-view {
+  color: var(--text-color) !important;
+}
+
+.light-theme .quote-card-view p {
+  color: var(--text-color) !important;
+}
+
+.light-theme .quote-card-view blockquote p {
+  color: var(--text-color) !important;
+}
+
+.light-theme .text-gray-800 {
+  color: var(--text-color) !important;
+}
+
+.light-theme .text-purple-600 {
+  color: var(--imp-text-color) !important;
+}
+
+.light-theme .blockquote-footer {
+  color: var(--imp-text-color) !important;
+}
+
 @media (max-width: 767px) {
   .about-img {
     padding-top: 0 !important;

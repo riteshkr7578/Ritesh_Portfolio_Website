@@ -14,27 +14,27 @@ import Experience from "../Experience";
 function Home() {
   return (
     <section>
-      <div className="home-section relative z-10 pt-5 pb-0">
+      <div className="relative z-10 pt-5 pb-0 home-section">
         <Particle />
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="px-4 mx-auto max-w-7xl">
           <div
-            className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-8"
+            className="flex flex-col items-center justify-center gap-10 md:flex-row md:gap-8"
             style={{ justifyContent: "center", alignItems: "center" }}
           >
             <div
-              className="md:w-5/12 text-left pt-2"
+              className="pt-2 text-left md:w-5/12"
               style={{ textAlign: "left", paddingRight: "2.5rem" }}
             >
-              <h1 className="text-3xl md:text-5xl font-bold pb-1">
+              <h1 className="pb-1 text-3xl font-bold md:text-5xl">
                 Hi There!{" "}
-                <span className="wave inline-block" role="img" aria-labelledby="wave">
+                <span className="inline-block wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
               </h1>
 
-              <h1 className="text-3xl md:text-5xl font-black mt-2">
+              <h1 className="mt-2 text-3xl font-black md:text-5xl">
                 I'M
-                <strong className="text-purple-primary ml-2"> RITESH KUMAR</strong>
+                <strong className="ml-2 text-purple-primary"> RITESH KUMAR</strong>
               </h1>
 
               <div className="py-10 text-lg font-light">
@@ -59,15 +59,15 @@ function Home() {
       <Home2 />
       <Experience />
 
-      <section className="find-me-section relative z-10 py-5 md:py-10">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="relative z-10 py-5 find-me-section md:py-10">
+        <div className="px-4 mx-auto max-w-7xl">
           <div className="flex flex-col items-center py-7 md:py-7">
             <div className="w-full text-center">
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">Find Me On</h1>
+              <h1 className="mb-4 text-3xl font-bold md:text-4xl">Find Me On</h1>
               <p className="text-base md:text-lg">
-                Feel free to <span className="text-purple-primary font-semibold">connect</span> with me
+                Feel free to <span className="font-semibold text-purple-primary">connect</span> with me
               </p>
-              <ul className="flex flex-wrap justify-center gap-4 mt-4 list-none p-0">
+              <ul className="flex flex-wrap justify-center gap-4 p-0 mt-4 list-none">
                 <li className="social-icons">
                   <a
                     href="https://github.com/riteshkr7578"
@@ -90,7 +90,7 @@ function Home() {
                 </li>
                 <li className="social-icons">
                   <a
-                    href="https://www.linkedin.com/in/ritesh-kumar-732535221/"
+                    href="https://www.linkedin.com/in/riteshkr7578/"
                     target="_blank"
                     rel="noreferrer"
                     className="home-social-icons"

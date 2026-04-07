@@ -5,7 +5,7 @@ function AboutCard() {
   return (
     <div className="quote-card-view border-none bg-transparent p-6" style={{ backgroundColor: "transparent" }}>
       <blockquote className="mb-0">
-        <p style={{ textAlign: "justify", color: "#ffffff" }}>
+        <p style={{ textAlign: "justify" }} className="text-gray-800 dark:text-white">
           Hi! I'm <span className="text-purple-primary font-semibold">Ritesh Kumar</span>, a Full Stack Developer from <span className="text-purple-primary font-semibold">Jaipur, Rajasthan</span>. I specialize in MERN stack development and currently work as a Software Development Engineer Intern at <span className="text-purple-primary font-semibold">Nodesure Technologies</span>.
           <br />
           <br />
@@ -33,10 +33,10 @@ function AboutCard() {
           </li>
         </ul>
 
-        <p style={{ color: "#a855f7", opacity: 0.8, marginTop: "20px" }}>
+        <p className="text-purple-600 dark:text-purple-400" style={{ opacity: 0.8, marginTop: "20px" }}>
           "Building scalable solutions that make a real impact." 💡
         </p>
-        <footer className="blockquote-footer" style={{ color: "#a855f7", opacity: 0.8 }}>Ritesh</footer>
+        <footer className="blockquote-footer text-purple-600 dark:text-purple-400" style={{ opacity: 0.8 }}>Ritesh</footer>
       </blockquote>
     </div>
   );

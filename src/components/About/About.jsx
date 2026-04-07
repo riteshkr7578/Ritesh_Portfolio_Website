@@ -12,17 +12,19 @@ function About() {
       <Particle />
       <div className="about-section relative z-10 pt-20 pb-8">
         <div className="max-w-7xl mx-auto px-4">
+          {/* Centered Heading */}
+          <h1 className="text-4xl md:text-5xl font-bold pb-8 text-center">
+            About <strong className="text-purple-primary">Me</strong>
+          </h1>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
             {/* Left Content */}
-            <div className="pt-8 md:pt-0">
-              <h1 className="text-4xl md:text-5xl font-bold pb-5">
-                About <strong className="text-purple-primary">Me</strong>
-              </h1>
+            <div className="pt-0">
               <Aboutcard />
             </div>
 
             {/* Right Image */}
-            <div className="pt-0 md:pt-28 flex justify-center">
+            <div className="pt-0 md:pt-12 flex justify-center">
               <img src={laptopImg} alt="about" className="w-full max-w-md" />
             </div>
           </div>
