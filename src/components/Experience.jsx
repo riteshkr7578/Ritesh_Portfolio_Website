@@ -8,7 +8,7 @@ function Experience() {
       title: "Software Development Engineer Intern",
       company: "Nodesure Technologies",
       location: "Jaipur, India",
-      period: "Feb 2026 – Present",
+      period: "Feb 2026 – April 2026",
       details: [
         "Contributed to the development of a production-grade CRM platform (Connverz) using Laravel, Vue.js, Inertia.js, and MySQL, enhancing campaign management, automation flows, and user engagement features",
         "Designed and implemented scalable RESTful APIs using Laravel and Eloquent ORM, improving system reliability and backend performance",
