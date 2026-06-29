@@ -18,7 +18,7 @@ function Projects() {
       title: "Move-Ease",
       description: "Built a full-stack movers marketplace using React, Node.js, and MongoDB, featuring a custom dashboard and secure JWT authentication. Integrated Google Maps APIs to automate logistics, enabling real-time distance calculations and dynamic pricing for seamless user bookings.",
       ghLink: "https://github.com/riteshkr7578/MoveEase---The-smartway-to-move",
-      demoLink: "https://move-ease-the-smartway-to-move.vercel.app/"
+      demoLink: "https://mvease.vercel.app/"
     },
     {
       imgPath: TalkFusion,
@@ -34,7 +34,7 @@ function Projects() {
       title: "✍️ BlogSphere – Full Stack Content Management Platform",
       description: "A full-stack Blog Platform built using the MERN stack, allowing users to create, manage, and publish blog posts with rich text content, images, categories, comments, likes, and a draft–publish workflow. The application is designed to reflect real-world content management behavior with proper authentication, authorization, and clean UI.",
       ghLink: "https://github.com/riteshkr7578/Blog-Platform-MERN",
-      demoLink: "https://github.com/riteshkr7578/Blog-Platform-MERN"
+      demoLink: "https://blogsphere-psi.vercel.app/"
     },
     {
       imgPath: Task,
